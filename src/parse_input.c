@@ -36,7 +36,8 @@ static char	*parse_env_var(char *str, int pos)
 		return (NULL);
 	}
 	ft_memdel((void **)&key);
-	ft_memdel((void **)&value);
+	if (value == NULL)
+		return ("");
 	return (value);
 }
 

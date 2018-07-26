@@ -12,15 +12,20 @@
 
 #include "minishell.h"
 
+static	int		isquote(char x)
+{
+	return ((x == '"' || x == '\''));
+}
+
 static void		echo_out(char **str, int pos)
 {
 	int		starts_with;
 	int		ends_with;
 	int		str_len;
 
-	starts_with = IS_QUOTE(str[pos][0]);
+	starts_with = isquote(str[pos][0]);
 	str_len = (int)ft_strlen(str[pos]);
-	ends_with = IS_QUOTE(str[pos][str_len - 1]);
+	ends_with = isquote(str[pos][str_len - 1]);
 	if (ends_with && starts_with)
 		ft_putnstr(str[pos] + 1, -1);
 	else if (ends_with)

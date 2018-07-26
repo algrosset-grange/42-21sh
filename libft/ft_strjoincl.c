@@ -16,14 +16,10 @@ char	*ft_strjoincl(char *s1, char *s2, int free_both)
 {
 	char	*new;
 
-	if (!(new = ft_strjoin(s1, s2)))
+	if ((new = ft_strjoin(s1, s2)) == NULL)
 		return (NULL);
-	free(s1);
-	s1 = NULL;
+	ft_memdel((void**)&s1);
 	if (free_both)
-	{
-		free(s2);
-		s2 = NULL;
-	}
+		ft_memdel((void**)&s2);
 	return (new);
 }

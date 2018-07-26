@@ -29,15 +29,9 @@ char	*parse_home_path(char *path, int reverse_parse)
 	if (get_env_var("HOME", &home_path) == ERROR)
 		return (NULL);
 	else if (home_path == NULL)
-	{
-		new = ft_strdup("");
-		return (new);
-	}
+		return (" ");
 	if (!ft_strstartswith(path, reverse_parse ? "~" : home_path))
-	{
-		ft_memdel((void **)&home_path);
 		return (ft_strdup(path));
-	}
 	if (reverse_parse)
 		new = ft_pathjoin(home_path, path + 1);
 	else

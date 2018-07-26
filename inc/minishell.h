@@ -24,7 +24,6 @@
 # define NO_ERROR -1
 # define NO_COMMAND -2
 # define ERROR -3
-# define IS_QUOTE(x) (x == '"' || x == '\'')
 
 char					**g_envv;
 
@@ -37,6 +36,11 @@ int						cd_builtin(char **command);
 ** src/change_dir.c
 */
 int						change_dir(char *path, int print_path);
+
+/*
+** src/check_bins.c
+*/
+int						check_bins(char **command);
 
 /*
 ** src/display_prompt_msg.c
@@ -74,7 +78,6 @@ int						set_env_var(char *key, char *value);
 /*
 ** src/setenv_builtin.c
 */
-//char					*get_env_var(char *var);
 int						get_env_var(char *var, char **rep);
 int						setenv_builtin(char **args);
 char					**realloc_envv(int new_size);

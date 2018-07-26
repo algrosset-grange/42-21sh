@@ -87,7 +87,7 @@ int			cd_builtin(char **args)
 {
 	char	*home_path;
 
-	if (get_env_var("HOME", &home_path)== ERROR)
+	if (get_env_var("HOME", &home_path) == ERROR)
 		return (ERROR);
 	else if (home_path == NULL)
 		return (0);
@@ -99,9 +99,9 @@ int			cd_builtin(char **args)
 		return (1);
 	}
 	else if (cd_builtin_p3(args, home_path) == ERROR)
-		{
-			ft_memdel((void **)&home_path);
-			return (ERROR);
-		}
+	{
+		ft_memdel((void **)&home_path);
+		return (ERROR);
+	}
 	return (1);
 }

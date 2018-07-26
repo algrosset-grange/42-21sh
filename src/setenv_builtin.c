@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int		get_env_var(char *var, char **rep)
+int			get_env_var(char *var, char **rep)
 {
 	int		i;
 	char	*tmp;
@@ -33,30 +33,6 @@ int		get_env_var(char *var, char **rep)
 	}
 	return (1);
 }
-
-/*
-char		*get_env_var(char *var)
-{
-	int		i;
-	char	*tmp;
-
-	i = -1;
-	while (g_envv[++i])
-	{
-		if ((tmp = ft_strjoinch(var, '=')) == NULL)
-		{
-			return (NULL);
-		}
-		if (ft_strstartswith(g_envv[i], tmp))
-		{
-			ft_memdel((void **)&tmp);
-			return (ft_strchr(g_envv[i], '=') + 1);
-		}
-		ft_memdel((void **)&tmp);
-	}
-	return (NULL);
-}
-*/
 
 static char	**ft_free_realloc(int i, char ***new)
 {
