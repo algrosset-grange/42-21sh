@@ -1,48 +1,48 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jubalest <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/03 16:27:24 by jubalest          #+#    #+#             */
-/*   Updated: 2015/12/03 16:27:26 by jubalest         ###   ########.fr       */
-/*                                                                            */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   minishell.h										:+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: jubalest <marvin@42.fr>					+#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2015/12/03 16:27:24 by jubalest		  #+#	#+#			 */
+/*   Updated: 2015/12/03 16:27:26 by jubalest		 ###   ########.fr	   */
+/*																			*/
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-# define READ      2048
+# define READ	  2048
 # define MAX_READ	128
-# define CWD       2048
+# define CWD	   2048
 # define DEFAULT_PS1 "21sh> "
 # define DEFAULT_PS2 "> "
 # define LEN_PS2 3
 # define END_PROMPT "> "
 # define USE_CWD	1
-# define TERM_SIZE    2048
-# define COMP_SIZE    256
+# define TERM_SIZE	2048
+# define COMP_SIZE	256
 
-# define KEY_BACK        	127
-# define KEY_DEL       		2117294875
+# define KEY_BACK			127
+# define KEY_DEL	   		2117294875
 
-# define KEY_RIGHT           4414235
-# define KEY_LEFT            4479771
+# define KEY_RIGHT		   4414235
+# define KEY_LEFT			4479771
 
-# define KEY_HOME_LINUX            4738843
-# define KEY_HOME            4741915
-# define KEY_CTRL_A            1
+# define KEY_HOME_LINUX			4738843
+# define KEY_HOME			4741915
+# define KEY_CTRL_A			1
 # define KEY_END_LINUX				4607771
 # define KEY_END				4610843
-# define KEY_CTRL_E            5
+# define KEY_CTRL_E			5
 
-# define KEY_UP            		4283163
-# define KEY_DOWN            4348699
+# define KEY_UP					4283163
+# define KEY_DOWN			4348699
 
 # define KEY_CTRL_LEFT		74995417045787
-# define KEY_MAJ_LEFT        74982532143899
+# define KEY_MAJ_LEFT		74982532143899
 # define KEY_CTRL_RIGHT		73895905418011
-# define KEY_MAJ_RIGHT        73883020516123
+# define KEY_MAJ_RIGHT		73883020516123
 
 # define KEY_CTRL_D				4
 
@@ -52,13 +52,13 @@
 # define KEY_ALT_K				27419
 
 # define KEY_CTRL_Y				25
-# define KEY_CTRL_MAJ_Y                5921563
+# define KEY_CTRL_MAJ_Y				5921563
 # define KEY_CTRL_UP			71696882162459
-# define KEY_MAJ_UP            71683997260571
+# define KEY_MAJ_UP			71683997260571
 # define KEY_CTRL_DOWN			72796393790235
-# define KEY_MAJ_DOWN            72783508888347
+# define KEY_MAJ_DOWN			72783508888347
 
-# define KEY_TAB	            9
+# define KEY_TAB				9
 
 # include <string.h>
 # include <term.h>
@@ -319,7 +319,7 @@ void				insert_yank(t_sh *shell, t_term *term);
 void				term_dup_to_current(t_sh *shell, t_term *term);
 void				restore_last(t_sh *shell, t_term *term);
 
-# define DEBUG_FD        shell->debug_fd
+# define DEBUG_FD		shell->debug_fd
 # define CONSOLE	shell->console
 
 int					create_debug_file(void);

@@ -90,7 +90,7 @@ class TestMinishell(unittest.TestCase):
 		self.valgrind(command)
 
 	def test_01_only_letter(self):
-		command = ["     l"]
+		command = ["	 l"]
 		self.compare_shells(command)
 		self.valgrind(command)
 
@@ -130,12 +130,12 @@ class TestMinishell(unittest.TestCase):
 		self.valgrind(command)
 
 	def test_08_with_empty_bin_ls(self):
-		command = ["   ", "/bin/ls", "    "]
+		command = ["   ", "/bin/ls", "	"]
 		self.compare_shells(command)
 		self.valgrind(command)
 
 	def test_09_with_empty_bin_ls(self):
-		command = ["   ", "/bin/ls", "-l", "    "]
+		command = ["   ", "/bin/ls", "-l", "	"]
 		self.compare_shells(command)
 		self.valgrind(command)
 
@@ -200,7 +200,7 @@ class TestMinishell(unittest.TestCase):
 		self.valgrind(command)
 
 	def test_202_ls(self):
-		command = ["\t  ls", " -la    ", " \t ."]
+		command = ["\t  ls", " -la	", " \t ."]
 		self.compare_shells(command)
 		self.valgrind(command)
 
@@ -634,15 +634,15 @@ class TestMinishell(unittest.TestCase):
 		self.valgrind(command)
 
 	def test_61_env_only(self):
-		command = ["    env"]
+		command = ["	env"]
 		self.valgrind(command)
 
 	def test_62_env_only(self):
-		command = ["env    "]
+		command = ["env	"]
 		self.valgrind(command)
 
 	def test_63_env_only(self):
-		command = ["    env    "]
+		command = ["	env	"]
 		self.valgrind(command)
 
 	def test_64_env_no_end_line(self):
@@ -965,7 +965,7 @@ class TestMinishell(unittest.TestCase):
 		self.valgrind(command)
 
 	def test_122_multi_run(self):
-		command = ["    ls    ", "   ;    ", "ls", " ; ;  "]
+		command = ["	ls	", "   ;	", "ls", " ; ;  "]
 		self.assertEqual(('', "syntax error near unexpected token `;'\n"), self.execute_my_shell(command))
 		self.valgrind(command)
 

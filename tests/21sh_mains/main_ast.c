@@ -17,8 +17,8 @@ int ast_testing(char *str, int debug)
 	ast = ast_build(ft_strdup(str), 0, shell);
 	if (debug)
 	{
-	    ft_putstr("[/ast_build]\n");
-	    ft_putstr("[ast_read]");
+		ft_putstr("[/ast_build]\n");
+		ft_putstr("[ast_read]");
 		ast_read(ast);
 		ft_putstr("[/ast_read]\n");
 		ft_putstr("[ast_exec]");
@@ -27,14 +27,14 @@ int ast_testing(char *str, int debug)
 
 	if (debug)
 	{
-	    ft_putstr("[/ast_exec]\n");
-	    ft_putstr("[ast_clean]");
-    }
+		ft_putstr("[/ast_exec]\n");
+		ft_putstr("[ast_clean]");
+	}
 	ast_clean(ast);
 	clean_program(shell);
 	if (debug)
 	{
-	    ft_putstr("[/ast_clean]\n");
+		ft_putstr("[/ast_clean]\n");
 	}
 	return (0);
 }
@@ -45,9 +45,9 @@ int main(int ac, char **av)
 	int debug = 0;
 
 	if (ac == 1)
-	    return (1);
+		return (1);
 	if (getenv("DEBUG21"))
 		debug = 1;
-    ret = ast_testing(av[1], debug);
+	ret = ast_testing(av[1], debug);
 	return (ret);
 }
