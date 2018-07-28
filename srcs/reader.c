@@ -32,7 +32,7 @@ void	signal_callback_handler(int sig_num)
 	}
 }
 
-char	*get_line_from_user(t_sh *shell)
+static char	*get_line_from_user(t_sh *shell)
 {
 	char	*buf;
 	long	key;

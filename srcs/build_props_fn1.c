@@ -40,7 +40,7 @@ t_env		*create_env_link(t_env *env, char *environ_entry)
 	return (NULL);
 }
 
-t_env		*build_env_pwd(t_env *env)
+static t_env		*build_env_pwd(t_env *env)
 {
 	char	*buf_wd;
 	char	*tmp;

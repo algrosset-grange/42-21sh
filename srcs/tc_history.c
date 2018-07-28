@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "../includes/minishell.h"
 
-t_hist	*create_history(void)
+static t_hist	*create_history(void)
 {
 	t_hist	*hist;
 

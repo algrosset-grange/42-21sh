@@ -14,7 +14,7 @@
 #include "../includes/minishell.h"
 #include "../libft/includes/libft.h"
 
-int		run_each_cli(t_ast **command, t_sh *shell)
+static int		run_each_cli(t_ast **command, t_sh *shell)
 {
 	int	i;
 	int	ret;
@@ -31,7 +31,7 @@ int		run_each_cli(t_ast **command, t_sh *shell)
 	return (ret ? 0 : 1);
 }
 
-int		process_cli(t_sh *shell)
+static int		process_cli(t_sh *shell)
 {
 	t_ast	**command;
 	int		ret;
@@ -46,7 +46,7 @@ int		process_cli(t_sh *shell)
 	return (0);
 }
 
-int		start_engine(t_sh *shell)
+static int		start_engine(t_sh *shell)
 {
 	while (42)
 	{

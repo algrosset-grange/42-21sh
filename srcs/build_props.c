@@ -15,7 +15,7 @@
 #include "../includes/minishell.h"
 #include "../libft/includes/libft.h"
 
-void	sub_part(t_sh *shell)
+static void	sub_part(t_sh *shell)
 {
 	shell->mock = NULL;
 	shell->l_env = NULL;
@@ -38,7 +38,7 @@ void	sub_part(t_sh *shell)
 	shell->map = NULL;
 }
 
-t_sh	*create_shell_from(char **environ_tab)
+static t_sh	*create_shell_from(char **environ_tab)
 {
 	t_sh	*shell;
 

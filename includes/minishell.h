@@ -119,8 +119,10 @@ typedef struct		s_sort
 	t_bin			*next;
 	t_bin			*tail;
 }					t_sort;
+
 void				set_merge(t_sort *merge, t_bin *list);
 int					compare_name(t_bin *one, t_bin *two);
+
 typedef struct		s_sh
 {
 	int				debug_fd;
@@ -190,7 +192,9 @@ void				builtin_cd(char **command, t_sh *shell);
 void				ft_setenv(char *name, char *value, t_sh *shell);
 void				convert_chars(char *str);
 t_env				*create_env_link(t_env *env, char *environ_entry);
-t_sh				*create_shell_from(char **environ_tab);
+
+//t_sh				*create_shell_from(char **environ_tab);
+
 t_sh				*create_shell_props(void);
 t_env				*manage_empty_environ(void);
 int					is_ignore_arg(char *arg);
@@ -335,7 +339,7 @@ void				exec_move_cursor_downline(t_sh *shell, t_term *term);
 void				term_dup_left(t_sh *shell, t_term *term);
 void				term_dup_right(t_sh *shell, t_term *term);
 
-t_hist				*create_history(void);
+//t_hist				*create_history(void);
 void				add_to_history(t_sh *shell, t_term *term);
 void				exec_history_up(t_sh *shell, t_term *term);
 void				exec_history_down(t_sh *shell, t_term *term);
@@ -352,7 +356,7 @@ t_term				*create_term_link(void);
 char				*tterm_to_str(t_term *term);
 void				safe_free_term(t_term *term);
 
-char				*get_line_from_user(t_sh *shell);
+//char				*get_line_from_user(t_sh *shell);
 
 void				init_current_console(t_sh *shell, t_term *end);
 void				end_of_reading(t_sh *shell, char *buf);
